@@ -1,0 +1,14 @@
+{{ $lang := .Site.Params.lang | default "en-us" }}
+
+<!DOCTYPE HTML>
+<html lang={{ $lang }}>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ .Title }}</title>
+        {{ partial "css.html" . }}
+        <script src="{{ "js/burger.js" | relURL }}"></script>
+        {{ .Hugo.Generator }}
+    </head>
+    <body>
+        {{ partial "navbar.html" . }}

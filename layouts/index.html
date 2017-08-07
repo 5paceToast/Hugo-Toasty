@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+<section class="hero is-fullheight is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <p class="title is-size-1 has-text-centered">{{ .Site.Params.Description }}</p>
+            <p class="subtitle is-size-2 has-text-centered">{{ .Site.Params.Author }}</p>
+        </div>
+    </div>
+</section>
+
+
+{{ partial "footer.html" . }}

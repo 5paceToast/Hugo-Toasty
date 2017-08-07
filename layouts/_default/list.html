@@ -1,0 +1,27 @@
+{{ partial "header.html" . }}
+<section class="section">
+    <div class="container">
+        <h1 class="title has-text-centered">{{ .Title }}</h1>
+        {{ range (.Paginator 5).Pages }} {{ partial "list-item" . }} {{ end }}
+    </div>
+</section>
+
+{{ if or .Paginator.HasPrev .Paginator.HasNext }}
+<section class="section">
+    <nav class="pagination">
+        {{ if .Paginator.HasPrev }}
+        <a class="pagination-previous" href="{{ .Paginator.Prev.URL }}" rel="prev">
+            Previous
+        </a>
+        {{ end }}
+
+        {{ if .Paginator.HasNext }}
+        <a class="pagination-next" href="{{ .Paginator.Next.URL }}" rel="next">
+            Next
+        </a>
+        {{ end }}
+    </nav>
+</section>
+{{ end }}
+
+{{ partial "footer.html" . }}

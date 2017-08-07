@@ -1,0 +1,30 @@
+<div class="container">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <div class="navbar-burger" id="burger" onclick="toggleBurger()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="navbar-menu" id="menu">
+            <div class="navbar-start">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="navbar-item">
+                    {{ with .Identifier }}<i class="fa fa-{{ . }}"></i>{{ end }}
+                    {{ with .Name }}{{ . }}{{ end }}
+                </a>
+                {{ end }}
+            </div>
+
+            <div class="navbar-end">
+                {{ range .Site.Menus.right }}
+                <a href="{{ .URL }}" class="navbar-item">
+                    {{ with .Identifier }}<i class="fa fa-{{ . }}"></i>{{ end }}
+                    {{ with .Name }}{{ . }}{{ end }}
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </nav>
+</div>

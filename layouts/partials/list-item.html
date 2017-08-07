@@ -1,0 +1,16 @@
+<div class="card">
+    <a href="{{ .RelPermalink }}">
+        <header class="card-header">
+            <p class="card-header-title">{{ .Title }}</p>
+            {{ with .Description }}<p>{{ .Description }}</p>{{ end }}
+        </header>
+        <footer class="card-footer">
+            <p class="card-footer-item">{{ .ReadingTime }} Minutes</p>
+            <p class="card-footer-item">{{ .WordCount }} Words</p>
+            <p class="card-footer-item">
+                {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}
+            </p>
+        </footer>
+    </a>
+</div>
+<br>

@@ -1,0 +1,23 @@
+/* navigation menu has a separator at the bottom */
+nav { border-bottom: 2px solid #eee; }
+
+/* code blocks */
+div.highlight pre, .container code {
+    background-color: #272822;
+    font-size: 1rem;
+    color: #eee; /* shouldn't do much to the highlighted stuff, specificity \o/ */
+}
+
+div.highlight, .container code {
+    border-radius: 5px;
+}
+
+/* make article lists have black text by default */
+.card a {
+    color: black;
+}
+
+/* everything changes color on hover */
+.card-header-title {
+    color: inherit;
+}

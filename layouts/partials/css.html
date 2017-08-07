@@ -1,0 +1,40 @@
+{{ $font     := .Site.Params.font     | default "Roboto" }}
+{{ $codefont := .Site.Params.codefont | default "Roboto Mono" }}
+{{ $color    := .Site.Params.color    | default "#33C3F0" }}
+{{ $herocol  := .Site.Params.herocol  | default "#00D1B2" }}
+
+<!-- Google Font -->
+<link rel="stylesheet"
+    href="//fonts.googleapis.com/css?family={{ $font }}:300,300italic,700,700italic">
+
+<!-- Code Font -->
+<link rel="stylesheet"
+    href="//fonts.googleapis.com/css?family={{ $codefont }}:300,700">
+
+<!-- Reset -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
+
+<!-- Bulma -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.0/css/bulma.min.css" integrity="sha256-qzwp3+P/LN8/hrx0ourjvGEOgPKNS+YNz7dNhasiRmQ=" crossorigin="anonymous" />
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<!-- Consistent Overrides -->
+<link rel="stylesheet" href="{{ "css/main.css" | relURL }}" />
+
+<!-- Overrides -->
+<style>
+    a:hover {
+        color: {{ $color }} !important; /* important for navbar */
+    }
+    body {
+        font-family: {{ $font }};
+    }
+    div.highlight pre, main.container code {
+        font-family: {{ $codefont }};
+    }
+    .hero.is-primary {
+        background-color: {{ $herocol }};
+    }
+</style>

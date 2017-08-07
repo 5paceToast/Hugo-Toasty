@@ -1,0 +1,12 @@
+name = "Toasty"
+license = "MIT"
+licenselink = "https://github.com/5paceToast/toasty/blob/master/LICENSE.md"
+description = "A beautiful and responsive JS-free theme"
+homepage = "https://github.com/5paceToast/toasty"
+tags = ["minimal", "responsive", "css", "bulma"]
+features = ["responsive"]
+min_version = "0.25.1"
+
+[author]
+  name = "Chloe Kudryavtsev"
+  homepage = "https://toastin.space"
