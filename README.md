@@ -1,6 +1,8 @@
 A Toasty theme for your hugo website
 ====================================
 
+[![license]](LICENSE.md)
+
 ### Installing ###
 
 ```bash
@@ -33,3 +35,5 @@ Note: menu entries can have a name (this will display text) and/or an identifier
 
 ### Syntax Highlighting ###
 Just `params.PygmentsCodeFences = true`. There is no reason to torture your website's visitors.
+
+[license]: https://img.shields.io/github/license/5pacetoast/Hugo-Toasty.svg
